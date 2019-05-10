@@ -28,17 +28,17 @@ def won?(board)
       return win_combination
    end
   end
-end 
- 
+end
+
 
 
 
 def full?(board)
   if board.include? " " || nil
     return false
-  else 
-    return true 
-  end 
+  else
+    return true
+  end
 end
 
 
@@ -46,18 +46,18 @@ end
 def draw?(board)
   if full?(board) && !(won?(board))
     return true
-  else 
+  else
     return false
   end
-end 
+end
 
 def over?(board)
   if won?(board) || draw?(board) || full?(board)
     return true
   else
     return false
-  end 
-end 
+  end
+end
 
 def winner(board)
   if won?(board)
@@ -71,8 +71,8 @@ def winner(board)
         board[win_combination[2]]=="O"
         return "O"
       end
-    end  
-  else 
-    return nil 
+    end
+  else
+    return nil
   end
 end 
